@@ -1,5 +1,5 @@
 FROM python:latest
 
-COPY main.py /main.py
+ADD main.py
 
-CMD [ "python3", "main.py"]
+CMD [ "python3", "./main.py"]
