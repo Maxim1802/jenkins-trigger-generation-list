@@ -1,5 +1,5 @@
 FROM python:3.9 
 
-ADD main.py .
+COPY main.py /main.py
 
-CMD [ "python", "./main.py"]
+CMD [ "python", "/main.py"]
