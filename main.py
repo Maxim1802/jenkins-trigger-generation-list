@@ -8,7 +8,7 @@ def main():
 
   ns = os.environ["INPUT_NAMESPACE"]
   stage = os.environ["INPUT_STAGE"]
-  jobs_shell = os.environ["INPUT_JOBS_STRING"]
+  jobs_path_string = os.environ["INPUT_JOBS_PATH_STRING"]
 
   jobs_list = []
   jobs_string = ""
@@ -16,7 +16,7 @@ def main():
   #print(re.sub("[a-z]*@", "abc@", jobs_string))
   #print(re.sub("^\[|]$", "", jobs_string))
 
-  for i in jobs_shell.split(" "):
+  for i in jobs_path_string.split(" "):
     jobs_list.append('%s-%s-%s' % (ns,stage,(i.split("/")[-1]).replace(".yaml","")))
 
   jobs_string = ','.join(jobs_list) 
