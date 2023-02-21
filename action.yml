@@ -1,19 +1,19 @@
 # action.yml
-name: 'Hello World'
+name: 'Jenkins trigget generation list'
 description: 'Greet someone and record the time'
 inputs:
   namespace:
-    description: "Jenkins job name to build"
+    description: "Namespace"
     required: true
-  stage:
-    description: "Jenkins job name to build"
-    required: true
+  # stage:
+  #   description: "Jenkins job name to build"
+  #   required: true
   jobs_path_string:
-    description: "Jenkins job name to build"
+    description: "String of jobs path"
     required: true
 outputs:
   jobs_string: # id of output
-    description: 'The time we greeted you'
+    description: 'Return all jobs'
 runs:
   using: 'docker'
   image: 'Dockerfile'

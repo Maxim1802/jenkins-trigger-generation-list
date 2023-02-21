@@ -7,7 +7,7 @@ from github_action_utils import save_state
 def main():
 
   ns = os.environ["INPUT_NAMESPACE"]
-  stage = os.environ["INPUT_STAGE"]
+  #stage = os.environ["INPUT_STAGE"]
   jobs_path_string = os.environ["INPUT_JOBS_PATH_STRING"]
 
   jobs_list = []
@@ -17,7 +17,7 @@ def main():
   #print(re.sub("^\[|]$", "", jobs_string))
 
   for i in jobs_path_string.split(" "):
-    jobs_list.append('%s-%s-%s' % (ns,stage,(i.split("/")[-1]).replace(".yaml","")))
+    jobs_list.append('%s-%s-%s' % (ns,i.split("/")[1],(i.split("/")[-1]).replace(".yaml","")))
 
   jobs_string = ','.join(jobs_list) 
 
