@@ -2,11 +2,17 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  jobs_json:
+  namespace:
+    description: "Jenkins job name to build"
+    required: true
+  stage:
+    description: "Jenkins job name to build"
+    required: true
+  jobs_string:
     description: "Jenkins job name to build"
     required: true
 outputs:
-  build_url: # id of output
+  jobs_string: # id of output
     description: 'The time we greeted you'
 runs:
   using: 'docker'

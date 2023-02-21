@@ -1,5 +1,7 @@
 FROM python:3.9 
 
-COPY main.py /main.py
+COPY main.py /main.py && requirements.txt /requirements.txt
+
+RUN pip install -r requirements.txt
 
 CMD [ "python", "/main.py"]
