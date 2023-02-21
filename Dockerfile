@@ -1,6 +1,6 @@
 FROM python:3.9 
 
-COPY main.py /main.py && requirements.txt /requirements.txt
+COPY main.py requirements.txt /
 
 RUN pip install -r requirements.txt
 
