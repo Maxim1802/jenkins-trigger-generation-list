@@ -23,8 +23,8 @@ def main():
 
   print(jobs_string)
 
-  set_output("jobs_string", "jobs_string")
-  save_state("jobs_string", "jobs_string")
+  set_output("jobs_string", jobs_string)
+  save_state("jobs_string", jobs_string)
 
 if __name__ == "__main__":
   main()
